@@ -1,0 +1,126 @@
+﻿---
+title: "43 Kennedy"
+author: "Kennedy"
+format:
+  html:
+    embed-resources: true
+---
+
+\newcommand{\ds}{\displaystyle}
+
+## Human Revision
+
+### Statement
+
+For each $n \in \mathbb{N}$, define $a_n = \frac{n-1}{n}$. Prove each as true or false. Rewrite statements using $\forall$ and $\exists$.
+
+1. For each real number $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for evvery $n \in \mathbb{N}$, if $n > N$ then $|a_n - 0| < \varepsilon$.
+
+1. For each real number $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for evvery $n \in \mathbb{N}$, if $n > N$ then $|a_n - 1| < \varepsilon$.
+
+### Solution
+
+1. Rewritten: $\forall \varepsilon > 0, \exists N \in \mathbb{N}$ such that $\forall n \in \mathbb{N}$, if $n > N$ then $|a_n - 0| < \varepsilon$.
+
+<!-- If true, let $\varepsilon > 0$.
+Let $N = ____$.
+Let $n \in \mathbb{N}$.
+Suppose $n > N$.
+We compute
+\begin{align*}
+|a_n - 0| &= |a_n|\\
+&= \left|\frac{n-1}{n}\right|\\
+&\ \vdots \quad  \text{(fill in gap)}\\
+&< \varepsilon.
+\end{align*} -->
+
+If false, $\exists \varepsilon > 0$ s.t. $\forall N \in \mathbb{N}$, $\exists n\in \mathbb{N}$ s.t. $n > N$ and $|a_n - 0| \ge \varepsilon$.
+
+Let $\varepsilon = \frac{1}{2}$.
+Let $N \in \mathbb{N}$.
+Let $n = 1 + N$.
+We compute $n = 1+N > N$.
+We compute
+\begin{align*}
+|a_n - 0| &= \left|\frac{n-1}{n}\right|\\
+&= \frac{n-1}{n} &(n \ge 1)\\
+&= 1 - \frac{1}{n}\\
+&= 1 - \frac{1}{1+N}
+&\ge 1 - \frac{1}{2}\\
+&= \frac{1}{2}\\
+&= \varepsilon.
+\end{align*}
+
+(Start of part 2 courtesy of Bro. Woodruff and Kennedy)
+
+2. $\forall \varepsilon > 0, \exists N \in \mathbb{N}$ s.t. $\forall n \in \mathbb{N}$, if $n > N$, then $|a_n -1| < \varepsilon$.
+
+Let $\varepsilon > 0$.
+Use the Archimedean property to pick $N \in \mathbb{N}$ such that $N > \frac{1}{\varepsilon}$.
+Let $n \in \mathbb{N}$.
+Suppose $n > N$.
+We compute
+\begin{align*}
+|a_n -1| &= \left| \frac{n-1}{n} - 1\right| &\text{(substitute)}\\
+&= \left| \frac{n}{n} - \frac{1}{n} - 1 \right|\\
+&= \left| -\frac{1}{n} \right|\\
+&= \frac{1}{n}\\
+&< \frac{1}{N} &(n > N \text{ so } \frac{1}{n} < \frac{1}{N})\\
+&< \varepsilon. &(N > \frac{1}{\varepsilon} \text{ so } \varepsilon > \frac{1}{N})
+\end{align*}
+$\square$
+
+
+## AI Transcription
+
+### Statement
+
+The problem statement is not visible in the scan; please supply it.
+
+### Solution
+
+1. $\forall \mathbb{R}\ \epsilon > 0$, $\exists N \in \mathbb{N}$ such that $\forall n \in \mathbb{N}$, if $n > N$ then $|a_n - 0| < \epsilon$.
+
+True
+
+Let $\epsilon \in \mathbb{R}$ such that $\epsilon > 0$.
+Let $N =$.
+Let $n \in \mathbb{N}$ such that $a_n = \frac{n-1}{n}$.
+Suppose $n > N$.
+
+We compute $a_n = \frac{n-1}{n}$.
+We then know $1 > a_n > 0$.
+Then by inequality property we can substitute to get the expression $1 - 0 > a_n - 0 > 0 - 0$ which is equivalent to $1 > a_n - 0 > 0$.
+Then by the absolute value property we know $|1| > |a_n - 0| > |0|$ is equivalent to $1 > |a_n - 0| > 0$.
+
+$0.11$
+
+$\frac{10}{11}\quad \frac{1}{2}$
+
+$0.5\quad n+1$
+
+Negation: $\exists \mathbb{R}\ \epsilon > 0$ such that $\forall N \in \mathbb{N}$, $\exists n \in \mathbb{N}$ such that $n > N$ and $|a_n - 1| \geq \epsilon$.
+
+False
+
+Let $\epsilon = 0.25$.
+Let $N \in \mathbb{N}$ and let $n = N+1$ such that $a_n = \frac{n-1}{n}$.
+Because $n = N+1$ by property we know $n > N$.
+Because $n = N+1$ and $a_n = \frac{n-1}{n}$, by substitution we know $a_{N+1} = \frac{N+1-1}{N+1}$ which is equivalent to $a_{N+1} = \frac{N}{N+1}$.
+Note $a_n = a_{N+1}$.
+We compute
+$$
+\begin{aligned}
+a_n - 1 &= \frac{N}{N+1} - 1,\\
+&= \frac{N}{N+1} - \frac{N+1}{N+1}\\
+a_n - 1 &= \frac{-1}{N+1}
+\end{aligned}
+$$
+
+### Handwritten Original
+
+![](43Kennedy.pdf){width=100% height=600px}
+
+### AI Use Statement
+
+OpenAI GPT-6 was used to transcribe the handwritten work into Quarto and LaTeX.

@@ -1,0 +1,86 @@
+﻿---
+title: "46 Josie"
+author: "Josie"
+format:
+  html:
+    embed-resources: true
+---
+
+\newcommand{\ds}{\displaystyle}
+
+## Human Revision
+
+### Statement
+
+### Solution
+
+## AI Transcription
+
+### Statement
+
+The full problem statement is not visible in the scan; please supply it.
+
+### Solution
+
+Problem 46
+
+Induction with sum of odds
+
+$$
+\begin{aligned}
+1 &= 1\\
+1+3 &= 4\\
+1+3+5 &= 9\\
+1+3+5+7 &= 16\\
+1+3+5+7+9 &= 25
+\end{aligned}
+$$
+
+Conjecture:
+For any natural number, $n \geq 1$, the sum of the $k^{\text{th}}$ odd numbers can be expressed as:
+
+$$1+3+5+\ldots n_k = k^2$$
+
+To find the $k^{\text{th}}$ odd number, we can write $(2k-1)$.
+
+Consider $k=1$.
+
+$$n_1=1, \qquad 1^2=1$$
+
+Consider $k=2$.
+For $k=2$, we have, $(2(2)-1)=3$
+
+$$1+3=4, \qquad 2^2=4.$$
+
+Assume that this is true for any arbitrarily chosen $k$.
+
+$$1+3+5+\ldots(2k-1)=k^2$$
+
+Now, we prove that this is true for $k+1$.
+
+$$1+3+5+\ldots(2k+1)=(k+1)^2$$
+
+So then, we have the result of $k$ plus $(k+1)$ should result in $(k+1)^2$.
+
+$$k^2+(2k+1)=(k+1)^2$$
+
+$$k^2+(2k+1)=(k+1)^2$$
+
+Now simplify using some algebra
+
+$$
+\begin{aligned}
+k^2+(2k+1)&=(k+1)(k+1)\\
+k^2+2k+1&=k^2+2k+1
+\end{aligned}
+$$
+
+Therefore, we know that through induction, because we assumed $k^2$ to be true, we have proven that $1+3+5\ldots(2k-1)=k^2$ is also true.
+
+### Handwritten Original
+
+![](46Josie.pdf){width=100% height=600px}
+
+### AI Use Statement
+
+OpenAI GPT-6 was used to transcribe the handwritten work into Quarto and LaTeX.

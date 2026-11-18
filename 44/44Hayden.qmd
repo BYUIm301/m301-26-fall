@@ -1,0 +1,27 @@
+---
+title: "P.x"
+---
+
+```{r results='asis', echo = FALSE}
+source("file_header.R")
+```
+
+{{< include _latex.txt >}}
+
+## Statement
+
+In each item below, you are given a relation $R$ between a set $A$ and a set $B$. Prove that the relation is a function from $A$ into $B$ or give a counter example to show that the relation is not a function from $A$ into $B$.
+
+1)  Let $\mathrm R$ be the relation between $\mathbb N$ and $\mathbb Z$ given by $(n,m) \in \mathrm R$ if and only if $n^2 = m$.
+2)  Let $\mathrm R$ be the relation between $\mathbb N$ and $\mathbb Z$ given by $(n,m) \in \mathrm R$ if and only if $n = m^2$.
+3)  Let $\mathrm R$ be the relation between $\mathbb R \times \mathbb R$ and $\mathbb R$ given by $((x,y),z) \in \mathrm R$ if and only if $x + y = z$.
+4)  Let $\mathrm R$ be the relation between $\mathbb R \times \mathbb R$ and $\mathbb R$ given by $((x,y),z) \in \mathrm R$ if and only if $x / y = z$.
+
+## Solution
+
+1)  Let $n \in \mathbb N$. Let $m = n^2$. Notice that $m \in \mathbb Z$. Let $m'\in \mathbb Z$ such that $(n, m') \in \mathrm R$. The definition of $\mathrm R$ implies $m' = n^2$. Thus, we have $m' = n^2 = m$. Therefore, we know that $m$ is unique. Therefore, we know that $R$ is a function.
+2)  Let $n = 2$. Notice that there is no $m \in \mathbb Z$ such that $2 = m^2$. Thus, we know the $R$ is not a function.
+3)  Let $x,y \in \mathbb R$. Let $z = x + y$. Notice that $z \in \mathbb R$. Let $z' \in \mathbb R$ such that $((x,y),z') \in \mathrm R$. The definition of $R$ implies $z' = x + y$. Thus, we have $z' = x + y =z$. Therefore, we know that $z$ is unique. Therefore, we know $\mathrm R$ is a function.
+4)  Let $x = 1$ and $y = 2$. Let $z = x/y$. Notice that $z \notin \mathbb R$. Therefore, we know $\mathrm R$ is not a function.
+
+## NOTES

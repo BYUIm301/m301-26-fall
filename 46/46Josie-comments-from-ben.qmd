@@ -1,0 +1,208 @@
+﻿---
+title: "46 Josie"
+author: "Josie"
+format:
+  html:
+    embed-resources: true
+---
+
+\newcommand{\ds}{\displaystyle}
+
+## Comments
+
+Hi Josie,
+
+I wanted to make some comments to help you. The things I'm seeing that are causing problems can be boiled down into 3 things. 
+
+1. Make sure every variable is defined before you use it.  If you plan to talk about $k$, then make sure you have defined $k$ first.
+2. Pay attention to what type of object everything is.  Statements are not numbers.  Equations are not numbers.  Numbers are not conditions. What is each type of thing you are working with?  Know what it is, and properly refer to the right type of object.  I'll provide examples below. 
+3. You cannot assume as true the very thing you are trying to prove. This is called circular logic. 
+
+
+### Define each variable. 
+
+Let's look at the first item above.  You wrote, 
+
+> For any natural number, $n \geq 1$, the sum of the $k^{\text{th}}$ odd numbers can be expressed as:
+  $$1+3+5+\ldots n_k = k^2$$
+
+You are looping over $n$, so that is defined, but then the variable $k$ shows up. The two don't match, so you have an undefined variable $k$.  Did you mean
+
+>  For every $n\in \mathbb{N}$, the sum of the $n^\text{th}$ odd numbers can be expressed as....
+
+This is problematic as well.  What is the sum of the $n^\text{th}$ odd numbers?
+Did you mean the sum of the first $n$ odd numbers? That's probably what you meant. 
+
+Next problem is that you have a new term $n_k$ in your work that isn't defined either.
+You will need to define it.
+Did you mean 
+
+> For every $k\in\mathbb{N}$, let $n_k$ be the $k$th odd number.
+
+I think that's what you meant, but I have to guess because you didn't define all your variables.
+
+You can save yourself a lot of trouble by writing less. 
+How about, 
+
+> For every $n\in \mathbb{N}$, we have $1+3+5+\ldots (2n-1) = n^2$.
+
+This dodges defining both $k$ and $n_k$, and gets your reader to the thing you want to focus on instantly. 
+
+
+Here is another issue.
+
+> Assume that this is true for any arbitrarily chosen $k$.
+  $1+3+5+\ldots(2k-1)=k^2$
+  Now, we prove that this is true for $k+1$.
+  $1+3+5+\ldots(2k+1)=(k+1)^2$
+
+What is "this" referring to? You make your reader guess. You also change "this" from one thing to another.
+Because you didn't define the statement, you have to use "this". 
+How about the following.
+
+> For each $n\in \mathbb{N}$, let $S_n$ be the statement $1+3+5\ldots(2n-1)=n^2$.
+  Assume that $S_k$ is true for any arbitrarily chosen $k$.
+  Now, we prove that $S_{k+1}$ is true. 
+
+Currently, your "we prove that this is true for $k+1$" is ambiguous.
+Note also that "for any arbitrarily chosen $k$" assumes that $S_k$ is true for all $k$ (real, natural, rational, complex....). 
+Did you mean
+
+  Assume that $S_k$ is true for some chosen $k\in\mathbb{N}$.
+  Now, we prove that $S_{k+1}$ is true.
+
+This fixes the variable definition to clearly show you've only assumed that $S_k$ is true for a single $k\in\mathbb{N}$.
+
+
+### Pay attention to the type of an object
+
+You wrote, 
+
+> So then, we have the result of $k$ plus $(k+1)$ should result in $(k+1)^2$.
+
+Is $k$ a number or a statement? 
+I believe it's a number here, because otherwise $(k+1)^2$ doesn't make sense. 
+But then because $k$ is a number, we have $k$ plus $(k+1)$ actually equals $2k+1$, not $(k+1)^2$. 
+So it looks like you're referring to $k$ as a statement and using "plus" to somehow mean to combine a statement and a number.
+I have to guess because you are not being precise.
+
+The fundamental problem here is that your are not paying attention to what type of object each thing in your work represents. 
+
+You appear to try to use the number $k$ to refer to the statement "$1+3+5\ldots(2k-1)=k^2$".
+A number is not a statement. So we have a problem. You must be precise. 
+Because you never defined the statement $1+3+5\ldots(2k-1)=k^2$, it's difficult to refer to it.
+There is a simple fix.  Define the statement. How about the following.
+
+> For each $n\in \mathbb{N}$, let $S_n$ be the statement $1+3+5\ldots(2n-1)=n^2$.
+  Suppose for some number $k\in \mathbb{N}$ that statement $S_k$ is true, which means we know $1+3+5\ldots(2k-1)=k^2$.
+  We must now prove that statement $S_{k+1}$ is true, which meand we must prove that $1+3+5\ldots(2k-1)+(2k+1)=(k+1)^2$.
+
+Make sure you refer to numbers and numbers, statements as statements, expressions as expressions, and so on.  Don't mix them up, otherwise your work becomes impossible to parse.
+
+
+### Avoid Circular Logic
+
+You wrote
+
+> So then, we have the result of $k$ plus $(k+1)$ should result in $(k+1)^2$.
+  $k^2+(2k+1)=(k+1)^2$
+
+It looks like you assumed as true that $1+3+5+\ldots(2k+1)=(k+1)^2$.
+Then you replaced $1+3+5+\ldots(2k-1)$ with $k^2$ in this unproven statement, which leads to an unproven claim $k^2+(2k+1)=(k+1)^2$. But you work with that claim as though it were true.
+
+You assumed as true what you must show, and then you substituted information into that. 
+This is a logical flaw called circular logic. 
+
+How do you resolve the problem? 
+Don't substitute anything into what you must show.
+Pick one side of what you must show and then start doing a computation that eventually ends with the other side.
+Only ever use facts that you know to be true. 
+Every equal sign you write either needs to be a statement of fact (that you can justify fully), or needs to have a "we must prove" in front of that statement. 
+
+> We must prove $1+3+5+\ldots(2k+1)=(k+1)^2$.
+  We first notice that $1+3+5+\ldots(2k+1)=[1+3+\cdots+(2k-1)]+(2k+1) = k^2+(2k+1)$, because we assumed $1+3+5+\ldots(2k-1)=k^2$ is true.
+  We then factor the right side to obtain $k^2+(2k+1) = (k+1)^2$.
+  This proves $1+3+5+\ldots(2k+1)=(k+1)^2$.
+
+Notice we didn't substitute anything into $1+3+5+\ldots(2k+1)=(k+1)^2$, rather we started with the expression on the left side, performed some computations to modify the expression $1+3+5+\ldots(2k+1)$ until we obtained the expression $(k+1)^2$, and finally obtained the equation $1+3+5+\ldots(2k+1)=(k+1)^2$.
+
+### Summary
+
+Your thought process is going in the correct direction. You still have work on these 3 big issues that Math 301 is helping you improve on. 
+
+1. Define all variables. 
+2. Be precise. 
+3. Avoid circular logic. 
+
+These 3 things are affecting not just induction, but most of the work done by every student in this class. They are precisely the things Math 301 helps you improve on. 
+
+## AI Transcription
+
+### Statement
+
+The full problem statement is not visible in the scan; please supply it.
+
+### Solution
+
+Problem 46
+
+Induction with sum of odds
+
+$$
+\begin{aligned}
+1 &= 1\\
+1+3 &= 4\\
+1+3+5 &= 9\\
+1+3+5+7 &= 16\\
+1+3+5+7+9 &= 25
+\end{aligned}
+$$
+
+Conjecture:
+For any natural number, $n \geq 1$, the sum of the $k^{\text{th}}$ odd numbers can be expressed as:
+
+$$1+3+5+\ldots n_k = k^2$$
+
+To find the $k^{\text{th}}$ odd number, we can write $(2k-1)$.
+
+Consider $k=1$.
+
+$$n_1=1, \qquad 1^2=1$$
+
+Consider $k=2$.
+For $k=2$, we have, $(2(2)-1)=3$
+
+$$1+3=4, \qquad 2^2=4.$$
+
+Assume that this is true for any arbitrarily chosen $k$.
+
+$$1+3+5+\ldots(2k-1)=k^2$$
+
+Now, we prove that this is true for $k+1$.
+
+$$1+3+5+\ldots(2k+1)=(k+1)^2$$
+
+So then, we have the result of $k$ plus $(k+1)$ should result in $(k+1)^2$.
+
+$$k^2+(2k+1)=(k+1)^2$$
+
+$$k^2+(2k+1)=(k+1)^2$$
+
+Now simplify using some algebra
+
+$$
+\begin{aligned}
+k^2+(2k+1)&=(k+1)(k+1)\\
+k^2+2k+1&=k^2+2k+1
+\end{aligned}
+$$
+
+Therefore, we know that through induction, because we assumed $k^2$ to be true, we have proven that $1+3+5\ldots(2k-1)=k^2$ is also true.
+
+### Handwritten Original
+
+![](46Josie.pdf){width=100% height=600px}
+
+### AI Use Statement
+
+OpenAI GPT-6 was used to transcribe the handwritten work into Quarto and LaTeX.

@@ -68,7 +68,7 @@ Currently, your "we prove that this is true for $k+1$" is ambiguous.
 Note also that "for any arbitrarily chosen $k$" assumes that $S_k$ is true for all $k$ (real, natural, rational, complex....). 
 Did you mean
 
-  Assume that $S_k$ is true for some chosen $k\in\mathbb{N}$.
+> Assume that $S_k$ is true for some chosen $k\in\mathbb{N}$.
   Now, we prove that $S_{k+1}$ is true.
 
 This fixes the variable definition to clearly show you've only assumed that $S_k$ is true for a single $k\in\mathbb{N}$.
@@ -97,7 +97,7 @@ There is a simple fix.  Define the statement. How about the following.
   Suppose for some number $k\in \mathbb{N}$ that statement $S_k$ is true, which means we know $1+3+5\ldots(2k-1)=k^2$.
   We must now prove that statement $S_{k+1}$ is true, which meand we must prove that $1+3+5\ldots(2k-1)+(2k+1)=(k+1)^2$.
 
-Make sure you refer to numbers and numbers, statements as statements, expressions as expressions, and so on.  Don't mix them up, otherwise your work becomes impossible to parse.
+Make sure you refer to numbers as numbers, statements as statements, expressions as expressions, and so on.  Don't mix them up, otherwise your work becomes difficult to parse, and sometimes impossible to fix. Here you can fix the imprecision, but imprecision can lead to catastrauphic failure.
 
 
 ### Avoid Circular Logic

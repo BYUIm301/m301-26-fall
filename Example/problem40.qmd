@@ -8,13 +8,17 @@ format:
 
 \newcommand{\ds}{\displaystyle}
 
-## Statement
+## Human Revision
+
+## AI Transcription
+
+### Statement
 
 Let $A, B, C$ be sets.
 
 Prove $A \setminus (B \setminus C) = (A \setminus B) \cup (A \cap C)$.
 
-## Solution
+### Solution
 
 let $x \in A \setminus (B \setminus C)$.
 This means $x \in A$ and $x \notin (B \setminus C)$.
@@ -40,12 +44,12 @@ Because $x \in A$ and $x \notin B \setminus C$, we have $x \in A \setminus (B \s
 Repeat for all $x \in (A \setminus B) \cup (A \cap C)$.
 we have shown $(A \setminus B) \cup (A \cap C) \subseteq A \setminus (B \setminus C)$. $\blacksquare$
 
-## Handwritten Original
+### Handwritten Original
 
 As appropriate, include a scan of your handwritten work.
 
 ![](problem40.pdf){width=100% height=600px}
 
-## AI Use Statement
+### AI Use Statement
 
 This Quarto document was transcribed from the handwritten PDF (`problem40.pdf`) using the Google Gemini AI model. Gemini processed the handwritten text and mathematical expressions, converting them into standard LaTeX and Quarto markup while strictly preserving the author's original sentence structure, capitalization, word choices, and logical layout.

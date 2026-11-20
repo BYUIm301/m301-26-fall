@@ -1,0 +1,64 @@
+---
+title: "Your Title"
+author: "Your Name"
+format:
+  html:
+    embed-resources: true
+---
+
+\newcommand{\ds}{\displaystyle}
+
+## Human Revision
+
+### Statement
+
+Consider the sequence $(a_n) = \left(\frac{n+1}{n}\right)$. Prove that $(a_n)$ converges to $L = 1$.
+
+### Solution
+
+$\forall \varepsilon > 0$, $\exists N \in \mathbb{R}$ s.t. $\forall n \in \mathbb{N}$, if $n > N$ then $|a_n - L| < \varepsilon$.
+
+Let $\varepsilon > 0$. Let $N = \frac{1}{\varepsilon}$.
+Let $n \in \mathbb{N}$.
+Suppose $n > N$. We compute
+\begin{align*}
+a_n &=  \frac{n+1}{n} \\
+&=  \frac{n}{n} + \frac{1}{n} \\
+&=  1 + \frac{1}{n}.
+\end{align*}
+
+<!-- > During a computation, you *always* start with only one thing. -->
+
+We then subtract $1$ inside the absolute values and compute
+\begin{align*}
+\left|a_n -1\right| &= \left| 1 + \frac{1}{n} - 1\right|\\
+&= \left| \frac{1}{n} \right|\\
+&= \frac{1}{n}\\
+&< \frac{1}{N} &\text{( $n> N$ means $\frac{1}{n} < \frac{1}{N}$.)}\\
+&= \varepsilon.
+\end{align*}
+
+$\square$
+
+
+
+## AI Transcription
+
+### Statement
+
+Type the problem statement here.
+
+### Solution
+
+Type your solution. 
+
+### Handwritten Original
+As approrpirate, include a scan of your handwritten work.
+
+![](document.pdf){width=100% height=600px}
+
+### AI Use Statement
+State how you used AI.
+This might be just the original transcription. 
+It might include helping point out flaws, or even rewriting based on feedback.
+It's your choice how you used AI, just remember to be open and transparent about how you used it. 

@@ -1,0 +1,46 @@
+---
+title: "Problem 48 Part 2"
+author: "Caleb"
+format:
+  html:
+    embed-resources: true
+---
+
+\newcommand{\ds}{\displaystyle}
+
+## Human Transcirption
+
+### Statement
+
+Consider the interval $S = (1,8)$.
+
+Find real numbers $x$ and $\varepsilon$ so that $N_\varepsilon(x)$ is a proper subset of $S$.
+
+### Solution
+
+Let $x = 4.5$ and $\varepsilon = 3$.
+Using the definition of $N_\varepsilon(x)$ we know $x-\varepsilon, x + \varepsilon = N_\varepsilon(x)$.
+Hence, we have $N_\varepsilon(x) = (4.5 - 3, 4.5 + 3)$.
+We will let $y \in (1.5, 7.5)$.
+We know $1 < 1.5 < y < 7.5 < 8$.
+Repeat for all $y \in N_\varepsilon(x)$.
+Hence, we know $N_\varepsilon(x) \subseteq S$.
+
+Let $z = 1.2$.
+Note: $z \in S$.
+We know $1 < 1.2 < 1.5$.
+Therefore, we have a $z$ in $S$ that is not in $N_\varepsilon(x)$.
+
+$\square$
+
+
+## AI Transcription
+
+### Statement
+
+### Solution
+
+### Handwritten Original
+
+
+### AI Use Statement
